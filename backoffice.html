@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova weekly</title>
+    <script src="../script.js" defer></script>
+    <script src="../scriptbackoffice.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        defer></script>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="bg-secondary ">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Simulatore E-Commerce</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html" aria-current="page">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="backoffice.html">Backoffice</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <form id="formAdd">
+
+        <div>
+            <label>Modello:</label>
+            <input type="text" name="Nome" id="nome">
+        </div>
+        <div>
+            <label>Descrizione:</label>
+            <input type="text" name="Descrizione" id="desc">
+        </div>
+        <div>
+            <label>Marca:</label>
+            <input type="text" name="Marca" id="brand">
+        </div>
+        <div>
+            <label>Url Immagine:</label>
+            <input type="url" name="Url Immagine" id="url" required>
+        </div>
+        <div>
+            <label>Prezzo:</label>
+            <input type="number" name="Prezzo" id="price">
+        </div>
+
+        <button type="button" onclick="addElement()">Inserisci articolo</button>
+        <button type="button" id="modifica" onclick="enableModifier()">Modifica Elementi</button>
+        <button type="button" onclick="resetbuttonForm()" id="reset">Reset</button>
+    </form>
+
+
+    <ul class="list-group list-group-numbered">
+
+    </ul>
+    <div class="container ">
+        <div class="row rowBackoffice justify-content-center align-items-center g-2">
+    
+        </div>
+    </div>
+
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+
+            <p>Modifica Articolo</p>
+            <div id="modArt"></div>
+
+        </div>
+    </div>
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+
+            <p>Sei sicuro di voler resettare il form?</p>
+            <div id="modArt2"></div>
+
+        </div>
+    </div>
+    <div id="myModal3" class="modal">
+        <div class="modal-content">
+
+            <p>Sei sicuro di voler eliminare l'articolo?</p>
+            <div id="modArt3"></div>
+
+        </div>
+    </div>
+    <div id="myModal4" class="modal">
+        <div class="modal-content">
+
+            <p id="Errore"></p>
+            <div id="modArt4"></div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
